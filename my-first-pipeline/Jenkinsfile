@@ -8,32 +8,14 @@ pipeline {
         sh 'node --version'
       }
     }
-    stages {
-    stage('Dev') {
+        stage('dev') {
       steps {
         sh 'java -version'
       }
     }
-      stages {
-    stage('prod') {
-      steps {
-        sh 'jenkins --version'
-      }
-    }
-        stages {
-    stage('stage') {
+        stage('deploy') {
       steps {
         sh 'docker --version'
-      }
-    }
-          stages {
-    stage('deploy') {
-      steps {
-        sh 'ps -ef | grep jenkins'
-      }
-    }
-          }
-        }
       }
     }
   }
