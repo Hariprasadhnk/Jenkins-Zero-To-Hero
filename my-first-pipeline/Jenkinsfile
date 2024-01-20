@@ -32,6 +32,9 @@ pipeline {
         sh 'ps -ef | grep jenkins'
       }
     }
+          }
+        }
+      }
+    }
   }
-}
 }
