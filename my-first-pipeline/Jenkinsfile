@@ -10,12 +10,12 @@ pipeline {
     }
         stage('dev') {
       steps {
-        sh 'java -version'
+        sh 'ps -ef | grep jenkins'
       }
     }
         stage('deploy') {
       steps {
-        sh 'docker --version'
+        sh 'nproc'
       }
     }
   }
